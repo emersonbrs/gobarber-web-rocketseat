@@ -39,7 +39,7 @@ export default function Notifications() {
     }
 
     loadNotifications();
-  }, []);
+  }, [notifications.data]);
 
   function handleToggleVisible() {
     setVisible(!visible);
@@ -54,6 +54,7 @@ export default function Notifications() {
       )
     );
   }
+
   return (
     <Container>
       <Badge onClick={handleToggleVisible} hasUnread={hasUnread}>

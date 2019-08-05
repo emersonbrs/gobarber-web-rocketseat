@@ -4,11 +4,12 @@ import { Form, Input } from '@rocketseat/unform';
 
 import { updateProfileRequest } from '~/store/modules/user/actions';
 
+import AvatarInput from './AvatarInput';
+
 import { Container } from './styles';
 
 export default function Profile() {
   const dispatch = useDispatch();
-  console.tron.log('oi');
   const profile = useSelector(state => state.user.profile);
 
   function handleSubmit(data) {
@@ -18,6 +19,8 @@ export default function Profile() {
   return (
     <Container>
       <Form initialData={profile} onSubmit={handleSubmit}>
+        <AvatarInput name="avatar_id" />
+
         <Input name="name" placeholder="Nome completo" />
         <Input name="email" type="email" placeholder="Seu endereço de e-mail" />
 
@@ -28,7 +31,7 @@ export default function Profile() {
           type="password"
           placeholder="Sua senha atual"
         />
-        <Input name="password" type="password" placeholder="Nova senha atual" />
+        <Input name="password" type="password" placeholder="Nova senha" />
         <Input
           name="confirmPassword"
           type="password"
