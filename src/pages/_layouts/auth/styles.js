@@ -38,6 +38,8 @@ export const Content = styled.div`
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
+      width: 100%;
+      text-align: center;
     }
 
     button {

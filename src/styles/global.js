@@ -13,7 +13,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  *:hover{
+  *:focus {
     outline: 0;
   }
 
