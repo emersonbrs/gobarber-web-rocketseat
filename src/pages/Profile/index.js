@@ -8,6 +8,7 @@ import { Container } from './styles';
 
 export default function Profile() {
   const dispatch = useDispatch();
+  console.tron.log('oi');
   const profile = useSelector(state => state.user.profile);
 
   function handleSubmit(data) {

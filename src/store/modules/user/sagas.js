@@ -15,12 +15,15 @@ export function* updateProfile({ payload }) {
     );
 
     const response = yield call(api.put, 'users', profile);
+    console.tron.log('EAE');
 
+    console.tron.log(payload);
     toast.success('Perfil atualizado com sucesso');
 
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
     toast.error('Erro ao atualizar perfil, confira seus dados!');
+    console.tron.log(err);
     yield put(updateProfileFailure());
   }
 }
